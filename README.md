@@ -4,7 +4,7 @@
 
 ## Git clone
 ```
-
+git clone https://github.com/NexSeed00/school-experience-share.git
 ```
 ## Composer i
 ```
