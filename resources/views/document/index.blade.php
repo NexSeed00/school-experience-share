@@ -48,11 +48,19 @@
             <dd class="c-form__body__control--2">
                 <input type="text" placeholder="山田" name="last">
                 <input type="text" placeholder="太郎" name="first">
-                <p class="c-form__alert"><small>必須項目に入力をしてください。</small></p>
+                @error('last')
+                    <p style="font-size:15px">{{ $message }}</p>
+                @enderror
+                @error('first')
+                    <p style="font-size:15px">{{ $message }}</p>
+                @enderror
             </dd>
             <dt class="c-form__body__title">メールアドレス<span class="c-form__required">必須</span></dt>
             <dd class="c-form__body__control">
                 <input type="email" placeholder="test＠gmail.com" name="email">
+                @error('email')
+                <p style="font-size:15px">{{ $message }}</p>
+                @enderror
             </dd>
             {{-- <dt class="c-form__body__title">メールアドレス(確認用) <span class="c-form__required">必須</span></dt>
             <dd class="c-form__body__control">
@@ -61,10 +69,16 @@
             <dt class="c-form__body__title">電話 <span class="c-form__required">必須</span></dt>
             <dd class="c-form__body__control">
                 <input type="tell" placeholder="09012345678" name="tel">
+                @error('tel')
+                <p style="font-size:15px">{{ $message }}</p>
+                @enderror
             </dd>
             <dt class="c-form__body__title">その他ご質問など</dt>
             <dd class="c-form__body__control">
                 <textarea placeholder="ここにお問い合わせ内容をお書きください。" name="content"></textarea>
+                @error('content')
+                <p style="font-size:15px">{{ $message }}</p>
+                @enderror
             </dd>
             </dl>
             <button class="c-form__submit-btn">ダウンロード</button>
