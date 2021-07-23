@@ -5,6 +5,7 @@
   <div class="c-main-nav__container">
       <ul class="c-main-nav__parent">
       <li class="is-currentt"><a href="{{url('/')}}">ホーム</a></li>
+      <li class="is-currentt"><a href="{{url('/document')}}">資料請求</a></li>
       </ul>
       <div class="c-main-nav__cv-btns"><a class="c-main-nav__cv-btns__request" href="{{url('/document')}}">資料請求</a><a class="c-main-nav__cv-btns__reserve" href="{{url('/counseling')}}">面談のご予約</a></div>
   </div>
