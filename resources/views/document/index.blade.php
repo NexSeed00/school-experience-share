@@ -46,8 +46,8 @@
             <dl class="c-form__body">
             <dt class="c-form__body__title">お名前<span class="c-form__required">必須</span></dt>
             <dd class="c-form__body__control--2">
-                <input type="text" placeholder="山田" name="last">
-                <input type="text" placeholder="太郎" name="first">
+                <input type="text" placeholder="山田" name="last" value="{{ old('last') }}">
+                <input type="text" placeholder="太郎" name="first" value="{{ old('first') }}">
                 @error('last')
                     <p style="font-size:15px">{{ $message }}</p>
                 @enderror
@@ -57,7 +57,7 @@
             </dd>
             <dt class="c-form__body__title">メールアドレス<span class="c-form__required">必須</span></dt>
             <dd class="c-form__body__control">
-                <input type="email" placeholder="test＠gmail.com" name="email">
+                <input type="email" placeholder="test＠gmail.com" name="email" value="{{ old('email') }}">
                 @error('email')
                 <p style="font-size:15px">{{ $message }}</p>
                 @enderror
@@ -68,14 +68,14 @@
             </dd> --}}
             <dt class="c-form__body__title">電話 <span class="c-form__required">必須</span></dt>
             <dd class="c-form__body__control">
-                <input type="tell" placeholder="09012345678" name="tel">
+                <input type="tell" placeholder="09012345678" name="tel" value="{{ old('tel') }}">
                 @error('tel')
                 <p style="font-size:15px">{{ $message }}</p>
                 @enderror
             </dd>
             <dt class="c-form__body__title">その他ご質問など</dt>
             <dd class="c-form__body__control">
-                <textarea placeholder="ここにお問い合わせ内容をお書きください。" name="content"></textarea>
+                <textarea placeholder="ここにお問い合わせ内容をお書きください。" name="content">{{ old('content') }}</textarea>
                 @error('content')
                 <p style="font-size:15px">{{ $message }}</p>
                 @enderror
